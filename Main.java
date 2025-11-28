@@ -16,7 +16,7 @@ public class Main {
             System.out.println("3 - Sair");
             System.out.print("Opção: ");
             opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            scanner.nextLine();
 
             if (opcao == 1) {
                 System.out.print("Nome: ");
@@ -48,7 +48,6 @@ public class Main {
                 List<Aluno> alunos = dao.listar();
                 System.out.println("\n--- LISTA DE ALUNOS ---");
                 for (Aluno a : alunos) {
-                    // Aqui ocorre o Polimorfismo: cada objeto executa seu próprio método
                     a.exibirInformacoes(); 
                     System.out.println("-----------------------");
                 }

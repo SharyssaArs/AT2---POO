@@ -41,11 +41,9 @@ public class AlunoDAO {
                 String nomePlano = rs.getString("plano");
                 String sexo = rs.getString("sexo");
 
-                // Recria o Plano (simplificado)
-                Plano p = new Plano(nomePlano, 0); // Preço 0 pois vem do banco só o nome
+                Plano p = new Plano(nomePlano, 0);
 
                 Aluno a;
-                // POLIMORFISMO na prática: instanciamos a classe correta
                 if (sexo.equals("M")) {
                     a = new AlunoHomem(nome, idade, cpf, p);
                 } else {
