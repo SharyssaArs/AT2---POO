@@ -1,24 +1,16 @@
 package model;
 
-public class Aluno extends Pessoa {
+public abstract class Aluno extends Pessoa {
     private Plano plano;
 
-    public Aluno(String nome, String cpf, Integer idade, Plano plano) {
-        super(nome, cpf, idade);
+    public Aluno(String nome, int idade, String cpf, Plano plano) {
+        super(nome, idade, cpf); //
         this.plano = plano;
     }
 
-    public Plano getPlano() {
-        return plano;
-    }
-
-    public void setPlano(Plano plano) {
-        this.plano = plano;
-    }
+    public Plano getPlano() { return plano; }
+    public void setPlano(Plano plano) { this.plano = plano; }
 
     @Override
-    public void exibirDados() {
-        super.exibirDados();
-        System.out.println("Plano: " + plano.getNome());
-    }
+    public abstract void exibirInformacoes();
 }
