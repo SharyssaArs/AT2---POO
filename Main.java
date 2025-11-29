@@ -30,7 +30,7 @@ public class Main {
                 System.out.println("Sexo: 1-Masculino | 2-Feminino");
                 int sexoOp = scanner.nextInt();
                 
-                // Escolha do Plano
+                
                 System.out.println("Plano: 1-Mensal | 2-Anual");
                 int planoOp = scanner.nextInt();
                 Plano plano = (planoOp == 1) ? Plano.MENSAL : Plano.ANUAL;
